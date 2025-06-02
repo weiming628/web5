@@ -1,0 +1,413 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+body {
+  max-width: 100%;
+  margin: 0 auto;
+  background: #FBFBFB;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    padding: 24px 5%;
+    font-weight: bold;
+    border-bottom: 1px solid black;
+}
+
+.header ul li{
+    display: inline-block;
+    padding: 0 20px;
+    font-size: 28px;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 24px 16px;
+  }
+
+  .header ul li{
+    font-size: 20px;
+    padding: 0 10px;
+  }
+
+}
+
+.blog{
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.blog-left, .blog-right{
+    flex: 1;
+    position: relative;
+}
+
+.blog-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.blog-left img{
+    width: 100%;
+}
+
+.blog-right img{
+    width: 100%;
+}
+
+.blog-text{
+    position: absolute;
+    top: 40%;
+    left: 10%;
+}
+
+.blog-text h1{
+    font-size: clamp(50px, 5vw, 120px);
+    color: #0027D5;
+    font-weight: bold;
+}
+
+.blog-text p{
+    font-size: 24px;
+    color:#0027D5;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+@media (max-width: 768px) {
+  .blog {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+
+}
+
+.about{
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.about-img{
+    flex: 1;
+    min-width: 0;
+}
+
+.about-img img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.about-text{
+    flex: 1;
+    width: 50%;
+    padding: 0 2%;
+}
+
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+
+  .about-img {
+    width: 100%;
+    margin: 0; 
+  }
+
+  .about-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+
+@media (max-width: 768px){
+    .about-text{
+        width: 100%;
+        padding: 48px 16px;
+    }
+}
+
+
+.about-date{
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.about-h3{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 24px;
+    color: blue;
+    margin-bottom: 8px;
+}
+
+.about-h2{
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.h3-tag{
+    font-size: 16px;
+    color: white;
+    background: #0027D5;
+    padding: 6px 12px;
+    border-radius: 40px;
+    margin-left: 8px;
+}
+
+.search{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    background: #FBFBFB;
+}
+
+.search p{
+    display: inline-block;
+    font-size: 16px;
+    color: #4B4B4B;
+    border: 1px solid #4B4B4B;
+    border-radius: 40px;
+    box-sizing: border-box;
+    padding: 16px 20px;
+    margin: 30px 30px;
+}
+
+
+.articles{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    width: 100%;
+    background: #fbfbfb;
+    margin: 0 auto;
+    padding: 5%;
+}
+
+.article{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30%;
+    margin-bottom: 50px;
+}
+
+.article img{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.populararticle{
+    display: flex;
+    align-items: center;
+}
+
+.tag{
+    margin-left: 10px;
+    text-align: center;
+    background: blue;
+    padding: 10px;
+    border-radius: 40px;
+    color: white;
+}
+
+.time{
+    font-size:16px;
+}
+
+.article h3{
+    color: blue;
+    font-size:25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+.article h2{
+    font-size:30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.text{
+    font-size:18px;
+    height: 48px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    margin-bottom: 60px;
+    color: #747474;
+    line-height: 1.5;
+}
+
+.article a{
+    font-size:18px;
+    text-decoration: none;
+    color: #747474;
+    border: 1px solid #747474;
+    padding: 20px;
+    border-radius: 40px;
+    display: inline-block;
+}
+
+.article a:hover{
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    background: #747474;
+}
+
+@media (max-width: 900px) {
+    .article {
+        width: calc(80% - 10px);
+        max-width: 600px;
+        margin: 0 auto 20px auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .articles {
+        padding: 15px;
+    }
+            
+    .article {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+            
+    .article img {
+        height: 150px;
+    }
+            
+    .article h2 {
+        font-size: 18px;
+    }
+}
+
+.pages{
+    display: flex;
+    justify-content: center;
+    background: #FBFBFB;
+    padding-bottom: 80px;
+    border-bottom: 1px solid black;
+}
+
+.choose-pages{
+    font-size: 25px;
+    color: #4B4B4B;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+@media (max-width: 768px) {
+    .footer{
+        display: none;
+    }
+}
+
+.email{
+    font-size: 32px;
+    padding: 80px 0;
+}
+
+.copyright{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.copyright p{
+    font-size: 16px;
+    text-align: center;
+    padding: 24px 5%;
+}
+
+@media (max-width: 768px) {
+    .copyright {
+        max-width: 100%;
+    }
+
+    .copyright p{
+        max-width: 100%;
+        padding: 24px 0;
+    }
+}
